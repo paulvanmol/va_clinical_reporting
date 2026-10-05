@@ -16,7 +16,7 @@ proc casutil;
     save casdata="&casout" incaslib="&incaslib" casout="&casout..sashdat" outcaslib="&outcaslib" replace;
 run;
 %mend;
-%loadtocas(file=/workshop/va_clinical_reporting/data/table_AE_DM.csv,casout=table_AE_DM)
+
 %loadtocas(file=/workshop/va_clinical_reporting/data/module2/adex.csv,casout=adex)
 %loadtocas(file=/workshop/va_clinical_reporting/data/module2/adlb.csv,casout=adlb)
 %loadtocas(file=/workshop/va_clinical_reporting/data/module2/advs.csv,outcaslib=public,casout=advs)
