@@ -15,20 +15,28 @@ Each exercise can be done **manually** in the VA interface or with **SAS Viya Co
 
 ```
 data/
-  table_AE_DM.csv            Module 1 – AE joined to DM, one row per AE
-  DATA_DICTIONARY.md
-  module2/
-    adex.csv                 Exposure – one row per subject
-    adlb.csv                 Laboratory – one row per subject / parameter / visit
-    advs.csv                 Vital signs – one row per subject / parameter / visit
-    DATA_DICTIONARY.md
+  table_ae_dm.sas7bdat          Module 1 – AE joined to DM, one row per AE
+  adex.sas7bdat                 Exposure – one row per subject
+  adlb.sas7bdat                 Laboratory – one row per subject / parameter / visit
+  advs.sas7bdat                 Vital signs – one row per subject / parameter / visit
+  rawdata/
+    table_AE_DM.csv
+    adex.csv
+    adlb.csv
+    advs.csv
 practice/
-  PRACTICE.md  SOLUTIONS.md              Module 1
-  module2/PRACTICE.md  module2/SOLUTIONS.md   Module 2
+  001_ae_investigation/
+    PRACTICE.md  SOLUTIONS.md DATA_DICTIONARY.md           
+  002_safety_report/
+    PRACTICE.md  
+    SOLUTIONS.md  
+    DATA_DICTIONARY.md
 scripts/
   generate_data.py           Module 1 data (fixed seed)
   generate_module2.py        Module 2 data (run after generate_data.py)
   expected_results.py        Rebuilds both SOLUTIONS.md files
+  load_clinicaldata_AE_DMtoCAS.sas
+  load_safetyreportdatatocas.sas
 ```
 
 ## Prerequisites
