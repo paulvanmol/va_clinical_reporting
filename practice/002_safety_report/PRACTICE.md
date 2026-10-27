@@ -30,7 +30,7 @@ Import `adex.sas7bdat`, `adlb.sas7bdat`, `adlb_edish.sas7bdat` and `advs.sas7bda
 
 For every table:
 
-1. Rename the items using [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
+1. Data Items use descriptive labels from the tables data labels, if you used .csv files, rename the items using [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
 2. Create **Subject Count** as a distinct count of USUBJID.
 3. Set the **AVISIT** sort order to follow visit order: right-click **AVISIT** → **Edit properties**, or sort on **AVISITN**. Otherwise WEEK 16 sorts before WEEK 2.
 
