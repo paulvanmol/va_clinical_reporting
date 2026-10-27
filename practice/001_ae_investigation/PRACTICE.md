@@ -27,7 +27,7 @@ Each exercise has:
 **1a. Readable names (Optional).**
 When import data from a sas table, the Data Items received descriptive names from the labels in the dataset.
 When import data from a CSV file, the Data Items may need to be renamed: 
-🖱️ Right-click a data item → **Edit properties** → **Name**. Use the labels in [`DATA_DICTIONARY.md`](../data/DATA_DICTIONARY.md).
+🖱️ Right-click a data item → **Edit properties** → **Name**. Use the labels in [`DATA_DICTIONARY.md`](../DATA_DICTIONARY.md).
 
 🤖
 ```
@@ -56,10 +56,13 @@ Build two pie charts: Planned Arm × Subject Count, and Actual Arm × Subject Co
 
 🤖
 ```
-create pie charts for planned arm by usubjid by distinct count and actual arm by usubjid by distinct count
+create Pie or Bar charts for planned arm by usubjid by distinct count and actual arm by usubjid by distinct count
 ```
 
-❓ *Which subjects received a different treatment than planned?* Hint: list table with USUBJID, ARM and ACTARM, filtered where ARM ≠ ACTARM.
+❓ *Which subjects received a different treatment than planned?* 
+Hint: Add list table with USUBJID, Planned ARM and Actual ARM to the same page, 
+Actions: Automatic actions on all objects: 
+- Select Planned ARM (High Dose, Low Dose) >filter the one that received Placebo
 
 ---
 
