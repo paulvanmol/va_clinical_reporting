@@ -20,7 +20,7 @@ You will build a **"Safety Review"** report with one page per question. The stru
 
 ## Exercise 0 – Import the three tables
 
-Import `adex.csv`, `adlb.csv` and `advs.csv` from `data/module2/`: **Add data** → **Import** → **Local files** → **Import all**. Then add all three tables to a new report and save it as **Safety Review**.
+Import `adex.sas7bdat`, `adlb.sas7bdat` and `advs.sas7bdat` from `data/`: **Add data** → **Import** → **Local files** → **Import all**. Then add all three tables to a new report and save it as **Safety Review**.
 
 > 💡 **Each page uses one data source.** VA visuals are bound to a single table. All three tables contain `USUBJID`, which lets you link pages through actions and *filter across data sources* (Exercise 7). Optionally, define a **data source mapping** on USUBJID and ACTARM (in the Data pane: data source menu → **Map data sources**).
 
@@ -30,7 +30,7 @@ Import `adex.csv`, `adlb.csv` and `advs.csv` from `data/module2/`: **Add data** 
 
 For every table:
 
-1. Rename the items using [`DATA_DICTIONARY.md`](../../data/module2/DATA_DICTIONARY.md).
+1. Rename the items using [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
 2. Create **Subject Count** as a distinct count of USUBJID.
 3. Set the **AVISIT** sort order to follow visit order: right-click **AVISIT** → **Edit properties**, or sort on **AVISITN**. Otherwise WEEK 16 sorts before WEEK 2.
 
