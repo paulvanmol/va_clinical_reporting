@@ -5,7 +5,7 @@
 Each exercise has:
 
 - 🖱️ **Manual path**: build it in the VA interface.
-- 🤖 **Copilot path**: type the prompt in *Ask SAS Viya Copilot*, then check what Copilot built.
+- 🤖 **Copilot path**: type the prompt in *Ask SAS Viya Copilot*, then check what Copilot built. (Copilot should have been activated by your Administrator)
 - ✅ **Check**: compare your result with [`SOLUTIONS.md`](SOLUTIONS.md).
 
 > Menu names can differ slightly between SAS Viya releases. If something is not where described, right-click the object or check the right-hand panes (Options, Roles, Actions, Filters).
@@ -24,7 +24,9 @@ Each exercise has:
 
 ## Exercise 1 – Prepare the data items
 
-**1a. Readable names.**
+**1a. Readable names (Optional).**
+When import data from a sas table, the Data Items received descriptive names from the labels in the dataset.
+When import data from a CSV file, the Data Items may need to be renamed: 
 🖱️ Right-click a data item → **Edit properties** → **Name**. Use the labels in [`DATA_DICTIONARY.md`](../data/DATA_DICTIONARY.md).
 
 🤖
@@ -35,15 +37,16 @@ AESEV AE Severity (Mild / Moderate / Severe), AEBODSYS System Organ Class / Body
 AEDECOD Dictionary-Derived Term, USUBJID Unique Subject Identifier, AGE Age
 ```
 
-**1b. Distinct-count measure.**
+**1b. Create Data Items: Distinct-count measure.**
+> 💡 The table has one row per AE. *Frequency* counts **AE records**. *Subject Count* counts **subjects** (incidence).
 🖱️ Right-click **Unique Subject Identifier** → **New calculation** → **Distinct count**. Rename the result **Subject Count**.
 
 🤖
 ```
 create an aggregation variable for usubjid of type distinct count
 ```
+Age uses Aggregation: SUM, change it to Aggregation: Average
 
-> 💡 The table has one row per AE. *Frequency* counts **AE records**. *Subject Count* counts **subjects** (incidence).
 
 ---
 
@@ -120,27 +123,24 @@ On a new page, create a bar chart that uses 'Age 5-Year Bin Categorization' as t
 
 ## Exercise 7 – Page "Subject Profile"
 
-🖱️ **List table** with subject, arm, age, sex, AE start date, preferred term, SOC, severity, serious and causality. Add a **drop-down list** on Unique Subject Identifier.
+🖱️ **List table** with subject, arm, age, sex, AE start date, Dictionary-Derived Term (preferred term), severity, serious and causality. Add a **drop-down list** on Unique Subject Identifier.
 
-🤖
-```
-in a new page create a list table for usubjid 01-701-1211 with actual arm, date, body system, severity
-```
+---
 
+## Exercise 8 – AE on Body System
+🖱️ **Bar Chart** with Category: System Organ Class/Body System, Measure: Subject Count
+🖱️ **Bar Chart** with Category: Dictionary-Derived Term, Measure: Subject Count
+🖱️ **Cross Tab** with Rows: System Organ Class/Body System, Columns: Actual ARM, Measure: Subject Count (add Options>Totals)
+Add several **drop-down list** to Page Controls on Study Site Identifier, AE Severity, Causality, Serious Event.
+Add Actions: Bar Chart Filters Dictionary Derived Term, Crosstab Actual ARM, 
+Add Page Link from Bar Chart System Organ Class/Body System>Subject Profile Page
+---
+
+### Exercise 9 - Explore AE on Body System: 
+
+- Filter on AE Severity: SEVERE, Causality: POSSIBLE, Serious: Y
+- Select Bar Chart System Organ Class, Double click to use the page link and see the Subject Profile list
 ❓ *Summarize subjects 01-708-1019 and 01-701-1211 in two sentences each.*
-
----
-
-## Exercise 8 – Finish
-
-🤖
-```
-give appropriate title for each page
-```
-
-Add a text object stating: *"Subject counts are distinct counts of USUBJID. Synthetic data."* Then save the report.
-
----
 
 ## Discussion
 
