@@ -47,10 +47,20 @@ create an aggregation variable for usubjid of type distinct count
 ```
 Age uses Aggregation: SUM, change it to Aggregation: Average
 
-
 ---
 
-## Exercise 2 – Page "Arm Planned vs Actual"
+## Exercise 2 – Page "Demography"
+
+Build two Automatic Charts: Race x Subject Count, Gender (Sex) x Subject Count, Ethnicity x Subject Count, 
+Add a **Box Plot** Gender x Age.
+
+🤖
+```
+create Pie or Bar charts for planned arm by usubjid by distinct count and actual arm by usubjid by distinct count
+```
+---
+
+## Exercise 3 – Page "Arm Planned vs Actual"
 
 Build two pie charts: Planned Arm × Subject Count, and Actual Arm × Subject Count.
 
@@ -66,7 +76,7 @@ Actions: Automatic actions on all objects:
 
 ---
 
-## Exercise 3 – Page "Arm by Gender"
+## Exercise 4 – Page "Arm by Gender"
 
 🖱️ **Bar chart**. Category: Actual Arm. Measure: Subject Count. Group: Sex. Direction: horizontal.
 
@@ -79,7 +89,7 @@ in a new page create a bar graph with actual arm by usubjid distinct count group
 
 ---
 
-## Exercise 4 – Page "AE Severity by Subject"
+## Exercise 5 – Page "AE Severity by Subject"
 
 🖱️ **Bar chart**. Category: AE Severity. Measure: Subject Count. Group: Sex. Page filter: AE Severity is not missing.
 
@@ -92,9 +102,9 @@ in a new page create bar chart for AE severity by unique subject id (distinct co
 
 ---
 
-## Exercise 5 – Page "Severe AEs Table" + drill-down
+## Exercise 6 – Page "Severe AEs Table" + drill-down
 
-**5a.** 🖱️ **List table** with AE Severity, Actual Arm, System Organ Class, Unique Subject Identifier, Sex, Dictionary-Derived Term and Start Date of AE. Filter: AE Severity = SEVERE.
+**6a.** 🖱️ **List table** with AE Severity, Actual Arm, System Organ Class, Unique Subject Identifier, Sex, Dictionary-Derived Term and Start Date of AE. Filter: AE Severity = SEVERE.
 
 🤖
 ```
@@ -105,15 +115,15 @@ then
 Can you add unique subject ID column
 ```
 
-**5b. Drill-down.** Select the bar chart from Exercise 4 → **Actions** pane → **Page links** → **Severe AEs Table**. In view mode, double-click the **SEVERE** bar.
+**6b. Drill-down.** Select the bar chart from Exercise 4 → **Actions** pane → **Page links** → **Severe AEs Table**. In view mode, double-click the **SEVERE** bar.
 
 ---
 
-## Exercise 6 – Page "AE Severity by 5-Year Age Group"
+## Exercise 7 – Page "AE Severity by 5-Year Age Group"
 
-**6a.** 🖱️ Right-click **Age** → **New custom category**. Create 5-year intervals (50–54 … 85–89) and name it **5-Year Age Grouping**.
+**7a.** 🖱️ Right-click **Age** → **New custom category**. Create 5-year intervals (50–54 … 85–89) and name it **5-Year Age Grouping**.
 
-**6b.** 🖱️ **Bar chart**. Category: 5-Year Age Grouping (sorted descending). Measure: Subject Count. Group: AE Severity.
+**7b.** 🖱️ **Bar chart**. Category: 5-Year Age Grouping (sorted descending). Measure: Subject Count. Group: AE Severity.
 
 🤖
 ```
@@ -124,13 +134,13 @@ On a new page, create a bar chart that uses 'Age 5-Year Bin Categorization' as t
 
 ---
 
-## Exercise 7 – Page "Subject Profile"
+## Exercise 8 – Page "Subject Profile"
 
 🖱️ **List table** with subject, arm, age, sex, AE start date, Dictionary-Derived Term (preferred term), severity, serious and causality. Add a **drop-down list** on Unique Subject Identifier.
 
 ---
 
-## Exercise 8 – AE on Body System
+## Exercise 9 – AE on Body System
 🖱️ **Bar Chart** with Category: System Organ Class/Body System, Measure: Subject Count
 🖱️ **Bar Chart** with Category: Dictionary-Derived Term, Measure: Subject Count
 🖱️ **Cross Tab** with Rows: System Organ Class/Body System, Columns: Actual ARM, Measure: Subject Count (add Options>Totals)
@@ -139,7 +149,7 @@ Add Actions: Bar Chart Filters Dictionary Derived Term, Crosstab Actual ARM,
 Add Page Link from Bar Chart System Organ Class/Body System>Subject Profile Page
 ---
 
-### Exercise 9 - Explore AE on Body System: 
+### Exercise 10 - Explore AE on Body System: 
 
 - Filter on AE Severity: SEVERE, Causality: POSSIBLE, Serious: Y
 - Select Bar Chart System Organ Class, Double click to use the page link and see the Subject Profile list
