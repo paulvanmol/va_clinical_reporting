@@ -4,8 +4,8 @@ Two hands-on modules that show how SAS Visual Analytics (SAS Viya) supports **in
 
 | Module | Report | Data | Time |
 |---|---|---|---|
-| **1** | AE Investigation (demographics, AE severity, severe-AE drill-down, age groups, subject profile) | `data/table_AE_DM.csv` | 60–75 min |
-| **2** | Cardiometabolic Safety Review (exposure, heart rate, HbA1c, lab shift, eDISH / Hy's Law, outlier detection, automated explanation) | `data/module2/*.csv` | 75–90 min |
+| **1** | AE Investigation (demographics, AE severity, severe-AE drill-down, age groups, subject profile) | `data/table_ae_dm.sas7bdat` | 60–75 min |
+| **2** | Cardiometabolic Safety Review (exposure, heart rate, HbA1c, lab shift, eDISH / Hy's Law, outlier detection, automated explanation) | `data/adex.sas7bdat,adlb.sas7bdat,advs.sas7bdat` | 75–90 min |
 
 Each exercise can be done **manually** in the VA interface or with **SAS Viya Copilot** prompts.
 
@@ -19,11 +19,10 @@ data/
   adex.sas7bdat                 Exposure – one row per subject
   adlb.sas7bdat                 Laboratory – one row per subject / parameter / visit
   advs.sas7bdat                 Vital signs – one row per subject / parameter / visit
-  rawdata/
-    table_AE_DM.csv
-    adex.csv
-    adlb.csv
-    advs.csv
+  table_AE_DM.csv
+  adex.csv
+  adlb.csv
+  advs.csv
 practice/
   001_ae_investigation/
     PRACTICE.md  SOLUTIONS.md DATA_DICTIONARY.md           
