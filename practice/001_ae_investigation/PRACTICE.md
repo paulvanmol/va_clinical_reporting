@@ -15,10 +15,10 @@ Each exercise has:
 ## Exercise 0 – Import the data
 
 1. Open **SAS Visual Analytics** → **New report**.
-2. In the **Data** pane, select **Add data** → **Import** → **Local files**, then select `data/table_AE_DM.csv`.
+2. In the **Data** pane, select **Add data** → **Import** → **Local files**, then select `data/table_ae_dm.sas7bdat`.
 3. Keep the table name `TABLE_AE_DM`. Choose a target library such as `cas-shared-default / Public`.
 4. Select **Import item**, then **Add to report**.
-5. Save the report as **Clinical Trials**.
+5. Save the report as **Clinical Trials Adverse Events**.
 
 ---
 
