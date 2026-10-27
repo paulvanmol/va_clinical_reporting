@@ -27,7 +27,7 @@ Each exercise has:
 **1a. Readable names (Optional).**
 When import data from a sas table, the Data Items received descriptive names from the labels in the dataset.
 When import data from a CSV file, the Data Items may need to be renamed: 
-🖱️ Right-click a data item → **Edit properties** → **Name**. Use the labels in [`DATA_DICTIONARY.md`](../DATA_DICTIONARY.md).
+🖱️ Right-click a data item → **Edit properties** → **Name**. Use the labels in [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md).
 
 🤖
 ```
