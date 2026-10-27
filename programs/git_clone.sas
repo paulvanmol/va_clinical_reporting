@@ -2,7 +2,7 @@ options dlcreatedir;
 %let repoPath = %sysfunc(getoption(WORK))/va_clinical_reporting;
 %let repoPath = /home/student/va_clinical_reporting;
 libname repo "&repoPath.";
-libname repo clear;  
+libname repo clear;
 
 /* Fetch latest code from GitHub */
 data _null_;
