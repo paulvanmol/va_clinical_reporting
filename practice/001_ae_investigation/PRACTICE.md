@@ -142,10 +142,9 @@ On a new page, create a bar chart that uses 'Age 5-Year Bin Categorization' as t
 
 ## Exercise 9 – Page "AE on Body System"
 
-🖱️ **List table** with subject, arm, age, sex, AE start date, Dictionary-Derived Term (preferred term), severity, serious and causality. Add a **drop-down list** on Unique Subject Identifier.
-🖱️ **Bar Chart** with Category: System Organ Class/Body System, Measure: Subject Count
-🖱️ **Bar Chart** with Category: Dictionary-Derived Term, Measure: Subject Count
-🖱️ **Cross Tab** with Rows: System Organ Class/Body System, Columns: Actual ARM, Measure: Subject Count (add Options>Totals)
+**9a.** 🖱️ **Bar Chart** with Category: System Organ Class/Body System, Measure: Subject Count
+**9b.** 🖱️ **Bar Chart** with Category: Dictionary-Derived Term, Measure: Subject Count
+**9c.** 🖱️ **Cross Tab** with Rows: System Organ Class/Body System, Columns: Actual ARM, Measure: Subject Count (add Options>Totals)
 - Add several **drop-down list** to Page Controls on Study Site Identifier, AE Severity, Causality, Serious Event.
 - Add Actions: Bar Chart Filters Dictionary Derived Term, Crosstab Actual ARM, 
 - Add Page Link from Bar Chart System Organ Class/Body System>Subject Profile Page
