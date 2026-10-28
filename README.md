@@ -5,7 +5,7 @@ Two hands-on modules that show how SAS Visual Analytics (SAS Viya) supports **in
 | Module | Report | Data | Time |
 |---|---|---|---|
 | **1** | AE Investigation (demographics, AE severity, severe-AE drill-down, age groups, subject profile) | `data/table_ae_dm.sas7bdat` | 60–75 min |
-| **2** | Cardiometabolic Safety Review (exposure, heart rate, HbA1c, lab shift, eDISH / Hy's Law, outlier detection, automated explanation) | `data/adex.sas7bdat,adlb.sas7bdat,advs.sas7bdat` | 75–90 min |
+| **2** | Cardiometabolic Safety Review (exposure, heart rate, HbA1c, lab shift, eDISH / Hy's Law, outlier detection, automated explanation) | `data/adex.sas7bdat,adlb.sas7bdat,adlb_edish.sas7bdat,advs.sas7bdat` | 75–90 min |
 
 Each exercise can be done **manually** in the VA interface or with **SAS Viya Copilot** prompts.
 
@@ -19,6 +19,7 @@ data/
   adex.sas7bdat                 Exposure – one row per subject
   adlb.sas7bdat                 Laboratory – one row per subject / parameter / visit
   advs.sas7bdat                 Vital signs – one row per subject / parameter / visit
+  adlb_edish.sas7bdat           eDISH Quadrant - one row per subject 
   table_AE_DM.csv
   adex.csv
   adlb.csv
@@ -34,8 +35,8 @@ scripts/
   generate_data.py           Module 1 data (fixed seed)
   generate_module2.py        Module 2 data (run after generate_data.py)
   expected_results.py        Rebuilds both SOLUTIONS.md files
-  load_clinicaldata_AE_DMtoCAS.sas
-  load_safetyreportdatatocas.sas
+  load_clinicaldata_AE_DMtoCAS.sas loads table_ae_dm to CAS
+  load_safetyreportdatatocas.sas   loads adex, adlb, advs, adlb_edish to CAS
 ```
 
 ## Prerequisites
