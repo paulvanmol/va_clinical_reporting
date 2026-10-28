@@ -157,7 +157,8 @@ On a new page, create a bar chart that uses 'Age 5-Year Bin Categorization' as t
 ### Exercise 10 - Explore AE on Body System: 
 
 - Filter on AE Severity: SEVERE, Causality: POSSIBLE, Serious: Y
-- Select Bar Chart System Organ Class, Double click to use the page link and see the Subject Profile list
+- Select Bar Chart System Organ Class, Double click to use the page link and see the Subject Profile list.
+
 ❓ *Summarize subjects 01-708-1019 and 01-701-1211 in two sentences each.*
 
 ## Discussion
